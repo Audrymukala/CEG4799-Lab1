@@ -1,0 +1,64 @@
+E5 - Analyse des trois surfaces d'entree
+
+1. Entrees utilisateur
+
+Source analysee : argv[1]
+
+Le programme catall.c recupere le nom de fichier fourni par
+l'utilisateur dans argv[1]. Cette valeur est ensuite inseree dans
+une chaine de commande avec sprintf(), puis transmise a system().
+
+Hypothese implicite :
+Le programme suppose que argv[1] contient une entree sure et qu'elle
+peut etre transmise a system() sans validation.
+
+Propriete de securite attendue :
+Une entree utilisateur ne doit pas pouvoir modifier la commande
+executee par le programme privilegie.
+
+
+2. Variables d'environnement
+
+Le programme utilise system(), qui execute une commande dans un
+environnement herite du processus.
+
+Dans cette version de catall.c, /bin/cat est deja specifie avec un
+chemin absolu. Le programme ne depend donc pas directement de PATH
+pour localiser cat.
+
+Hypothese implicite :
+Le programme suppose que l'environnement herite est suffisamment
+controle pour une execution privilegiee.
+
+Propriete de securite attendue :
+Un programme privilegie doit utiliser un environnement explicitement
+controle. Les variables conservees doivent etre limitees et les
+variables sensibles telles que PATH et IFS doivent etre controlees.
+
+
+3. Liaison dynamique
+
+Le comportement du chargeur dynamique constitue une autre surface
+d'entree a analyser pour un programme Set-UID.
+
+Hypothese implicite :
+Le programme ne doit pas supposer que les variables de liaison
+dynamique se comportent de la meme maniere dans une execution
+ordinaire et dans une execution Set-UID.
+
+Verification :
+Le comportement de LD_PRELOAD avec le programme Set-UID sera observe
+dans l'essai T6.
+
+
+Conclusion
+
+Les trois surfaces identifiees sont :
+- les entrees utilisateur, notamment argv[1];
+- l'environnement du processus;
+- la liaison dynamique.
+
+La principale faiblesse visible dans catall.c est l'utilisation de
+system() avec une chaine contenant directement une entree utilisateur.
+La correction devra utiliser une invocation plus sure et un
+environnement controle.
