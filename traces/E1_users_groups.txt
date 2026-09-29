@@ -1,0 +1,13 @@
+=== E1 - Utilisateurs et groupes ===
+
+=== Utilisateur courant ===
+uid=1000(alice) gid=1002(alice) groups=1002(alice),1000(devteam)
+
+=== Utilisateurs ===
+alice:x:1000:1002::/home/alice:/bin/bash
+bob:x:1001:1003::/home/bob:/bin/bash
+charlie:x:1002:1004::/home/charlie:/bin/bash
+
+=== Groupes du laboratoire ===
+devteam:x:1000:alice,bob
+securityteam:x:1001:charlie
