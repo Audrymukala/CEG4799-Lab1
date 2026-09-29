@@ -1,0 +1,6 @@
+ENTRÉE : `id`
+SURFACE : injection shell (surface 1)
+CAUSE : substitution avec backticks
+EFFET : exécution de id
+PROPRIÉTÉ VIOLÉE : P4
+CONTRE-MESURE : execve() sans shell

@@ -1,0 +1,5 @@
+=== T8 : Non-réversibilité de setresuid() ===
+
+chown: changing ownership of '/tmp/test_reelevation': Operation not permitted
+--- Exécution en tant qu'alice ---
+Password: 

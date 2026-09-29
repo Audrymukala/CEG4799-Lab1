@@ -1,0 +1,6 @@
+ENTRÉE : BASH_ENV=/tmp/evil.sh
+SURFACE : variable d'environnement (surface 2c)
+CAUSE : script sourcé au démarrage d'un shell non-interactif
+EFFET : exécution d'un script arbitraire
+PROPRIÉTÉ VIOLÉE : P3
+CONTRE-MESURE : environnement reconstruit + execve() direct

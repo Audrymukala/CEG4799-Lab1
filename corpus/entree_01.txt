@@ -1,0 +1,6 @@
+ENTRÉE : ; cp /etc/shadow /tmp/x
+SURFACE : injection shell (surface 1)
+CAUSE : system() → /bin/sh -c
+EFFET : exécution de cp avec les droits du programme
+PROPRIÉTÉ VIOLÉE : P4
+CONTRE-MESURE : execve() sans shell

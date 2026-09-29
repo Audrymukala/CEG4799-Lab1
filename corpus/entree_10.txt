@@ -1,0 +1,6 @@
+ENTRÉE : ../../etc/shadow
+SURFACE : entrée utilisateur (surface 1)
+CAUSE : absence de validation du chemin
+EFFET : lecture d'un fichier hors du répertoire prévu
+PROPRIÉTÉ VIOLÉE : P4
+CONTRE-MESURE : validation du chemin + privilège abandonné

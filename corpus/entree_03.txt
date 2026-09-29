@@ -1,0 +1,6 @@
+ENTRÉE : && whoami
+SURFACE : injection shell (surface 1)
+CAUSE : exécution conditionnelle par le shell
+EFFET : exécution d'une commande arbitraire
+PROPRIÉTÉ VIOLÉE : P4
+CONTRE-MESURE : execve() sans shell

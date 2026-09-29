@@ -1,0 +1,6 @@
+ENTRÉE : LD_PRELOAD=/tmp/evil.so
+SURFACE : liaison dynamique (surface 3)
+CAUSE : préchargement de bibliothèque
+EFFET : ignoré par le noyau pour un binaire Set-UID (protection AT_SECURE)
+PROPRIÉTÉ VIOLÉE : aucune (protection système) — hypothèse à écrire malgré tout
+CONTRE-MESURE : protection noyau + ne pas dépendre de cette protection

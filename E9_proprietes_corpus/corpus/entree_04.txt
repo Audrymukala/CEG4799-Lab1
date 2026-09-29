@@ -1,0 +1,6 @@
+ENTRÉE : $(cat /etc/passwd)
+SURFACE : injection shell (surface 1)
+CAUSE : substitution de commande par le shell
+EFFET : lecture de fichier avec les droits du programme
+PROPRIÉTÉ VIOLÉE : P4
+CONTRE-MESURE : execve() sans shell

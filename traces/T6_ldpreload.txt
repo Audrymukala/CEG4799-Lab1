@@ -1,0 +1,9 @@
+=== T6 : LD_PRELOAD Set-UID vs non Set-UID ===
+
+cp: cannot create regular file '/lab/catall_nosuid': Permission denied
+chmod: cannot access '/lab/catall_nosuid': No such file or directory
+--- Test 1 : Set-UID catall (LD_PRELOAD doit être IGNORÉ) ---
+c36c260863e4
+
+--- Test 2 : Non Set-UID catall_nosuid (LD_PRELOAD doit FONCTIONNER) ---
+/lab/exploits/exploit_ldpreload.sh: line 24: /lab/catall_nosuid: No such file or directory

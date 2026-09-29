@@ -1,0 +1,6 @@
+=== E6b : Détournement IFS ===
+Utilisateur : alice (uid=1000)
+IFS=/ / PATH=/tmp/evil:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+c36c260863e4
+--- Preuve ---
+ECHEC

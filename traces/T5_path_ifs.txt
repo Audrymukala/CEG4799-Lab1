@@ -1,0 +1,15 @@
+=== E6b : Détournement PATH/IFS (vulp_relative) ===
+Utilisateur : alice (uid=1000)
+
+--- Test 1 : PATH détourné ---
+[!] Faux 'cat' exécuté — uid=1000
+
+[+] PATH : SUCCÈS
+[!] Faux 'cat' exécuté — uid=1000
+
+--- Test 2 : IFS détourné ---
+[!] Faux 'cat' exécuté — uid=1000
+
+[-] IFS : pas de preuve (chemin absolu dans catall, ou IFS sans effet ici)
+
+=== Fin E6b ===

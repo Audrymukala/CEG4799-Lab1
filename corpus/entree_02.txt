@@ -1,0 +1,6 @@
+ENTRÉE : | id > /tmp/out
+SURFACE : injection shell (surface 1)
+CAUSE : pipe interprété par /bin/sh
+EFFET : redirection + exécution de id
+PROPRIÉTÉ VIOLÉE : P4
+CONTRE-MESURE : execve() sans shell

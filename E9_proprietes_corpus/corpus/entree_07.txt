@@ -1,0 +1,6 @@
+ENTRÉE : IFS=/
+SURFACE : variable d'environnement (surface 2b)
+CAUSE : modification du découpage des mots par le shell
+EFFET : redirection de la résolution de commande
+PROPRIÉTÉ VIOLÉE : P3 (environnement non contrôlé)
+CONTRE-MESURE : environnement reconstruit (liste blanche)

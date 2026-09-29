@@ -1,0 +1,18 @@
+=== T7 : Vérifier que les entrées de T4/T5 sont inertes ===
+
+--- Test 1 : injection de commande ---
+[i] Après abandon : ruid=1000 euid=1000 suid=1000
+/bin/cat: '/etc/passwd; id > /tmp/injection_proof.txt; echo INJECTED': No such file or directory
+[+] SUCCÈS : injection inerte
+
+--- Test 2 : PATH détourné ---
+[i] Après abandon : ruid=1000 euid=1000 suid=1000
+c36c260863e4
+[+] SUCCÈS : PATH inopérant (chemin absolu)
+
+--- Test 3 : IFS détourné ---
+[i] Après abandon : ruid=1000 euid=1000 suid=1000
+c36c260863e4
+[+] SUCCÈS : IFS inopérant
+
+=== Fin T7 ===

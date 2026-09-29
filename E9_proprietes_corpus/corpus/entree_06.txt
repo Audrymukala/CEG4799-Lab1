@@ -1,0 +1,6 @@
+ENTRÉE : PATH=/tmp/evil:$PATH
+SURFACE : variable d'environnement (surface 2a)
+CAUSE : résolution d'une commande par nom relatif
+EFFET : exécution d'un faux binaire à la place du vrai
+PROPRIÉTÉ VIOLÉE : P2 (chemin absolu)
+CONTRE-MESURE : execve() avec chemin absolu
