@@ -1,0 +1,35 @@
+    1  whoami
+    2  id
+    3  umask
+    4  touch /shared/alice.txt
+    5  ls-l /shared
+    6  ls -l /shared
+    7  umask 0002
+    8  umask
+    9  touch /shared/alice_umask002.txt
+   10  ls -l /shared
+   11  exit
+   12  id
+   13  /lab/uid_demo
+   14  exit
+   15  id
+   16  /lab/uid_privilege
+   17  pwd
+   18  ls -la
+   19  cd ~/lab
+   20  ls -la
+   21  ls -l
+   22  cat uid_privilege.c
+   23  find / -name "uid_privilege" 2>/dev/null
+   24  find / -name "uid_privilege.c" 2>/dev/null
+   25  cd /lab
+   26  ls -l
+   27  cd ~/lab
+   28  find / -name "uid_privilege" 2>/dev/null
+   29  find / -name "uid_privilege.c" 2>/dev/null
+   30  git status 
+   31  pwd
+   32  ls
+   33  docker ps
+   34  history > /lab/history_E1_E5.txt
+   35  history > ~/history_E1_E5.txt
