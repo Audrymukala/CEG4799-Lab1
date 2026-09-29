@@ -1,0 +1,18 @@
+=== E4 - Modele de privilege Set-UID ===
+
+=== Identite avant execution ===
+uid=1000(alice) gid=1002(alice) groups=1002(alice),1000(devteam)
+
+=== Proprietaire et permissions ===
+-rwsr-xr-x 1 root root 17016 Sep 27 23:39 /lab/uid_privilege
+
+=== Execution du programme ===
+1. Au demarrage
+RUID=1000 EUID=0 SUID=0
+
+2. Apres abandon temporaire
+RUID=1000 EUID=1000 SUID=0
+
+3. Apres restauration
+RUID=1000 EUID=0 SUID=0
+
